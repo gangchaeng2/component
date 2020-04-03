@@ -22,6 +22,11 @@ const Header = () => {
           </NavLink>
         </li>
         <li>
+          <NavLink to="/bar-chart" exact activeStyle={active}>
+            BAR-CHART
+          </NavLink>
+        </li>
+        <li>
           <NavLink to="/pie-chart" exact activeStyle={active}>
             PIE-CHART
           </NavLink>
