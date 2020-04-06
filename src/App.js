@@ -4,6 +4,7 @@ import * as d3 from 'd3';
 import styled from 'styled-components';
 
 import Header from './components/header';
+import Week from './components/week';
 import { Home } from './components/carousel';
 import { Pie, Stacked, Bar as BarChart } from './components/chart';
 
@@ -50,6 +51,7 @@ function App() {
           <Route path="/bar-chart" component={BarChart} />
           <Route path="/pie-chart" component={AnimatedPie} />
           <Route path="/stacked-chart" component={Stacked} />
+          <Route path="/week" component={Week} />
         </Switch>
       </Router>
     </Wrap>

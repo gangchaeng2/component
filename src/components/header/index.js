@@ -36,6 +36,11 @@ const Header = () => {
             STACKED-CHART
           </NavLink>
         </li>
+        <li>
+          <NavLink to="/week" exact activeStyle={active}>
+            WEEK
+          </NavLink>
+        </li>
       </ul>
     </Wrap>
   );
