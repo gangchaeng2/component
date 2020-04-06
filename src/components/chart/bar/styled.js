@@ -3,14 +3,30 @@ import styled from 'styled-components';
 export const Chart = styled.div`
   > svg {
     .x {
-      .domain {
-        color: #ececec;
-        background-color: #ececec;
+      .tick {
+        text {
+          fill: #888;
+          font-size: 16px;
+
+          tspan {
+            font-size: 12px;
+          }
+        }
       }
     }
+
     .y {
-      .domain {
-        opacity: 0;
+      .tick {
+        text {
+          fill: #888888;
+          font-size: 14px;
+          font-weight: 300;
+        }
+        > line {
+          stroke: #ececec;
+          stroke-opacity: 0.7;
+          shape-rendering: crispEdges;
+        }
       }
     }
   }
