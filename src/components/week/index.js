@@ -4,6 +4,8 @@ import startOfWeek from 'date-fns/startOfWeek';
 import endOfWeek from 'date-fns/endOfWeek';
 import addWeeks from 'date-fns/addWeeks';
 
+import { Wrap } from './styled';
+
 const Week = () => {
   const [amount, setAmount] = useState(0);
   const [start, setStart] = useState(startOfWeek(new Date()));
@@ -11,21 +13,19 @@ const Week = () => {
 
   useEffect(() => {
     const week = addWeeks(new Date(), amount);
-    console.log(week);
 
     setStart(startOfWeek(week));
     setEnd(endOfWeek(week));
   }, [amount]);
 
   return (
-    <div>
-      <p>amout: {amount}</p>
+    <Wrap>
+      <button onClick={() => setAmount(state => state - 1)}>-</button>
       <p>
         {format(start, 'yy.MM.dd')} ~ {format(end, 'yy.MM.dd')}
       </p>
-      <button onClick={() => setAmount(state => state - 1)}>-</button>
       <button onClick={() => setAmount(state => state + 1)}>+</button>
-    </div>
+    </Wrap>
   );
 };
 

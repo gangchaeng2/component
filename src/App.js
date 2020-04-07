@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import * as d3 from 'd3';
 import styled from 'styled-components';
+import { Reset } from 'styled-reset';
 
 import Header from './components/header';
 import Week from './components/week';
@@ -43,6 +44,7 @@ const Bar = () => {
 function App() {
   return (
     <Wrap>
+      <Reset />
       <Router>
         <Header />
 

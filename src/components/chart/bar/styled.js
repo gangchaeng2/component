@@ -1,5 +1,11 @@
 import styled from 'styled-components';
 
+export const Wrap = styled.div`
+  width: 586px;
+  height: 300px;
+  padding: 20px;
+`;
+
 export const Chart = styled.div`
   > svg {
     .x {
